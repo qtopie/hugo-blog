@@ -9,6 +9,10 @@
     <title>{{ .Title }}</title>
     <meta charset="utf-8">
 
+    <style amp-custom>
+            {{ partial "stylesheet" . | safeCSS }}
+    </style>
+    
     {{ partial "amp/header" . }}
 
     <link rel="canonical" href="{{ .Permalink }}">
@@ -23,6 +27,8 @@
     {{ end }}
 
     <meta name="theme-color" content="{{ $.Site.Params.themeColor }}" />
+
+
 
     {{ partial "seo/main" . }}
 

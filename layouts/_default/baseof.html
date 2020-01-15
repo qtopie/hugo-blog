@@ -1,7 +1,11 @@
 {{ partial "structure/head" . }}
 
+{{ partial "navbar" . }}
+
 <main>
     {{ block "main" . }} {{ end }}
 </main>
+
+{{ partial "footer" . }}
 
 {{ partial "structure/foot" . }}
