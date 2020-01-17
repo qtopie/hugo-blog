@@ -8,7 +8,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build:prod": "npm run theme:build && hugo && npm run optimize:html",
         "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json",
-        "theme:build": "node ./.bin/styling",
+        "theme:build": "node ./.bin/styling.js",
         "theme:watch": "./node_modules/.bin/nodemon -e scss -w ./ -x npm run theme:build"
     },
     "author": "artificerpi",
