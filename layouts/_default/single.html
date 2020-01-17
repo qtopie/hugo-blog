@@ -1,7 +1,21 @@
 {{ define "main" }}
 
-<main>
-    {{ .Content }}
-</main>
+
+<article>
+    <header class="article-header">
+        <h1 class="article-title">{{ .Title }}</h1>
+    </header>
+
+    {{ if .Params.toc }}
+    <section class="article-toc">
+        <h2>Contents</h2>
+        <div class="toc">
+            {{ .TableOfContents }}
+        </div>
+    </section>
+    {{ end }}
+
+    <div class="article-body">{{ replaceRE  "\\[ (.*) \\]" "&bsol;[ $1 &bsol;]" .Content | safeHTML }}</div>
+</article>
 
 {{ end }}
