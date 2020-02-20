@@ -1,8 +1,33 @@
-.l-header {
-
+header .drawer {
+  visibility: hidden;
 }
 
-.md-layout-title {
-    margin-top: 0px;
-    margin-bottom: 0px;
+header .brand-logo {
+  text-align: center;
+  text-transform: none;
+}
+
+header .brand-logo a {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  letter-spacing: 0.02em;
+}
+
+header .site-title {
+  display: block;
+  position: relative;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+header nav.pure-menu-horizontal {
+    width: fit-content;
 }

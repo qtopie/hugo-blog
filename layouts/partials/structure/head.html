@@ -4,15 +4,15 @@
 <!--[if lt IE 8 ]><html {{ if isset $.Site.Params "amp" }}amp{{ end }} lang="en" class="no-js oldie"><![endif]-->
 <!--[if IE 8 ]><html {{ if isset $.Site.Params "amp" }}amp{{ end }} lang="en" class="no-js ie8"><![endif]-->
 <!--[if IE 9 ]><html {{ if isset $.Site.Params "amp" }}amp{{ end }} lang="en" class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html {{ if isset $.Site.Params "amp" }}amp{{ end }} lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}" class="no-js"><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html {{ if isset $.Site.Params "amp" }}amp{{ end }} lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}"
+    class="no-js">
+<!--<![endif]-->
+
 <head>
     <title>{{ .Title }}</title>
     <meta charset="utf-8">
 
-    <style amp-custom>
-            {{ partial "stylesheet" . | safeCSS }}
-    </style>
-    
     {{ partial "amp/header" . }}
 
     <link rel="canonical" href="{{ .Permalink }}">
@@ -29,14 +29,17 @@
     <meta name="theme-color" content="{{ $.Site.Params.themeColor }}" />
 
     {{ partial "seo/main" . }}
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
 
 </head>
 
 <body>
-{{ if isset $.Site.Params "ampmanifest" }}
-{{ with $.Site.Data.app.banner }}{{ partial "amp/app-banner" . }}{{ end }}
-{{ end }}
+    {{ if isset $.Site.Params "ampmanifest" }}
+    {{ with $.Site.Data.app.banner }}{{ partial "amp/app-banner" . }}{{ end }}
+    {{ end }}
 
-{{ else }}
-{{ partial "structure/head.no-amp" . }}
-{{ end }}
+    {{ else }}
+    {{ partial "structure/head.no-amp" . }}
+    {{ end }}

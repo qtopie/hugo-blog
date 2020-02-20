@@ -1,23 +1,45 @@
-$a-tags: 'a, a:active, a:hover, a:visited';
-$a-tags-hover: 'a:active, a:hover';
+// main layout
 
-@mixin transform($transform) {
-            transform: $transform;
-    -webkit-transform: $transform;
-        -ms-transform: $transform;
-}
-@mixin animation($animation, $delay : 0) {
-    -webkit-animation: $animation;
-    animation: $animation;
-    @if $delay > 0 {
-        -webkit-animation-delay: #{$delay}s;
-        animation-delay: #{$delay}s;
-    }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-@import 'surface';
+main {
+    // padding: 1rem 0 3rem 0;
+    background-color: rgba(236,239,241,.5);
+}
+
+main, aside {
+    display: block;
+    margin-bottom: 0em;
+    flex: 1;
+}
+
+main .container {
+    position: relative;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+main .container .mrow {
+    overflow: hidden;
+    width: 100%;
+}
+
+main .container .mcol {
+    box-sizing: border-box;
+    float: left;
+    padding: 0 1rem;
+}
+
+@import 'purecss';
 @import 'navbar';
 @import 'gridcard';
 @import 'sidebar';
 @import 'footer';
 @import 'backtotop';
+@import 'code';
+@import 'article';

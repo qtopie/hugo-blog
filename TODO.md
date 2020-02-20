@@ -9,6 +9,7 @@ https://sourcegraph.com/github.com/DanielMuller/hugo-theme-campser/-/blob/layout
 2. card
 https://themes.gohugo.io/hugo-cards/
 https://sourcegraph.com/github.com/bul-ikana/hugo-cards/-/blob/layouts/_default/baseof.html
+https://xyproto.github.io/splash/docs/longer/all.html
 
 3. nodejs
 https://www.henriksommerfeld.se/build-steps-using-npm-scripts-for-my-hugo-blog/

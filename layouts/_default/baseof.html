@@ -3,10 +3,15 @@
 {{ partial "navbar" . }}
 
 <main>
-    {{ block "main" . }} {{ end }}
+    <div class="container pure-g">
+        <div class="mrow">
+            <div class="mcol pure-u-3-4">{{ block "content" . }} {{ end }}</div>
+            <aside class="mcol pure-u-1-4">{{ partial "sidebar" .}}</aside>
+        </div>
+    </div>
 </main>
 
-{{ partial "sidebar" .}}
+
 
 {{ partial "footer" . }}
 
