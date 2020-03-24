@@ -26,9 +26,9 @@
           <div class="panel-logo">
           <!-- TODO optimize me -->
           {{ if .Params.img }}
-          <amp-img class="pure-img" width="120" height="120" src="{{ .Site.BaseURL }}images/{{ .Params.img }}" alt="{{ .Title }}">
+          <amp-img class="pure-img" width="120" height="120" src="{{ .Site.BaseURL }}/images/{{ .Params.img }}" alt="{{ .Title }}">
           {{ else }}
-          <amp-img class="pure-img" width="120" height="120" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}" alt="{{ .Site.Title }}">
+          <amp-img class="pure-img" width="120" height="120" src="{{ .Site.BaseURL }}/images/{{ .Site.Params.defaultImage }}" alt="{{ .Site.Title }}">
           {{ end }}
           </div>
 
