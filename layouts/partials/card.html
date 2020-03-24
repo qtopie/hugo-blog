@@ -1,37 +1,44 @@
 <div class="home">
 
-  <div class="row pack">
+  <div id="wrapper">
+    <div class="cube">
+      <!--Front-->
+      <div>Experimental feature</div>
+      <!--Back-->
+      <div>back</div>
+      <!--Left-->
+      <div>left</div>
+      <!--Right-->
+      <div>right</div>
+      <!--Top-->
+      <div>top</div>
+      <!--Bottom-->
+      <div>Hello World!</div>
+    </div>
+  </div>
 
+  <div class="grid">
     {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts") }}
     {{ range $paginator.Pages }}
-    <div class="col-md-4 card">
+    <div class="card">
       <a href="{{ .Permalink }}" class="index-anchor">
-        <div class="panel panel-default">
-          {{ if ne .Params.amp.enable false }}
+        <div class="panel">
+          <div class="panel-logo">
           <!-- TODO optimize me -->
           {{ if .Params.img }}
-          <amp-img class="pure-img" width="675" height="900" src="{{ .Site.BaseURL }}images/{{ .Params.img }}" alt="{{ .Title }}">
+          <amp-img class="pure-img" width="120" height="120" src="{{ .Site.BaseURL }}images/{{ .Params.img }}" alt="{{ .Title }}">
           {{ else }}
-          <amp-img class="pure-img" width="675" height="900" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}" alt="{{ .Site.Title }}">
+          <amp-img class="pure-img" width="120" height="120" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}" alt="{{ .Site.Title }}">
           {{ end }}
-
-          {{ else }}
-
-          {{ if .Params.img }}
-          <img width="100%" class="pure-img" src="{{ .Site.BaseURL }}images/{{ .Params.img }}" alt="{{ .Title }}">
-          {{ else }}
-          <img width="100%" class="pure-img" src="{{ .Site.BaseURL }}images/{{ .Site.Params.defaultImage }}" alt="{{ .Site.Title }}">
-          {{ end }}
-
-          {{ end }}
-
-          <div class="panel-body">
-            <h3 class="panel-title pull-left">{{ .Title | truncate 25 }}</h3><span
-              class="post-meta pull-right"><small>{{ .Date.Format "January 2, 2006" }}</small></span>
           </div>
 
-          <div class="panel-body"><small>
-              {{ .Summary | plainify | truncate 180 }}</small>
+          <div class="panel-header">
+            <h3 class="panel-title">{{ .Title | truncate 25 }}</h3>
+            <span class="panel-meta"><small>{{ .Date.Format "January 2, 2006" }}</small></span>
+          </div>
+
+          <div class="panel-description">
+            <small>{{ .Summary | plainify | truncate 160 }}</small>
           </div>
         </div>
       </a>
@@ -39,9 +46,6 @@
 
     {{ end }}
 
-  </div>
-
-  <div class="row">
     <div class="col-md-4"> </div>
     <div class="col-md-4">
       {{ if gt .Paginator.TotalPages 1 }}
@@ -73,4 +77,5 @@
     </div>
     <div class="col-md-4"> </div>
   </div>
+
 </div>

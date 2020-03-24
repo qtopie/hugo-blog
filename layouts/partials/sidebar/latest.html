@@ -1,0 +1,11 @@
+<section class="sidebar">
+    <header>{{ i18n "latest" }}</header>
+    <div>
+      <div class="articles sm">
+        {{ range $i, $p := (first 5 .Site.Pages) }}
+        {{ partial "sidebar/li_sm.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  

@@ -1,54 +1,58 @@
 .card {
-    float: none;
-    background-color: white;
-    margin: 1rem;
+  float: none;
+  background-color: white;
+  margin: 1rem;
 }
 
-// 自适应
-@media (min-width: 992px) {
-    .col-md-4  {
-        // 每行3个卡片
-        width: 33.33333333%;
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-*:before, *:after {
-    box-sizing: border-box;
+.card .panel .panel-logo {
+    display: inline-block;
 }
 
-.row {
-    margin-left: 15px;
-    margin-right: 15px;
+.card .panel .panel-header {
+    display: inline-block;
 }
 
-.row:after {
-    clear: both;
-    content: "";
-    display: table;
+.card .panel .panel-description {
+    display: inline;
 }
 
-.row .pack {
-    content: "";
-    display: table;
-}
+// .row {
+//     margin-left: 15px;
+//     margin-right: 15px;
+// }
+
+// .row:after {
+//     clear: both;
+//     content: "";
+//     display: table;
+// }
+
+// .row .pack {
+//     content: "";
+//     display: table;
+// }
 
 // 与table使用指定card布局
-.pack {
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    // flex 实现自动填充
-    display: inline-flex;
-    // wrap自动换行
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-}
+// .pack {
+//     display: -webkit-inline-flex;
+//     display: -ms-inline-flexbox;
+//     // flex 实现自动填充
+//     display: inline-flex;
+//     // wrap自动换行
+//     flex-wrap: wrap;
+//     -webkit-flex-wrap: wrap;
+// }
 
 .pagination li {
-    display: inline-block;
-    margin-left: 10px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
+.grid {
+    margin-left: 80px;
+}

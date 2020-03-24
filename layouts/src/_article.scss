@@ -6,3 +6,7 @@ main > .container article {
 .container article p {
   text-align: justify;
 }
+
+.container article img {
+  max-width: -webkit-fill-available;
+}
