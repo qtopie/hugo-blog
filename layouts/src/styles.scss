@@ -21,7 +21,6 @@ main .container {
     position: relative;
     max-width: 90rem;
     margin: 0 auto;
-    padding: 0 4rem;
 }
 
 main .container .mrow {
@@ -36,6 +35,7 @@ main .container .mcol {
 }
 
 @import 'purecss';
+@import '_purecss-grids-responsive-min';
 @import 'navbar';
 @import 'gridcard';
 @import 'sidebar';
@@ -44,3 +44,25 @@ main .container .mcol {
 @import 'code';
 @import 'article';
 @import 'cube';
+
+// lg
+@media screen and (min-width: 64em) {
+    // padding left
+    main .container {
+        padding: 0 4rem;
+    }
+
+
+}
+
+// md and small 
+@media screen and (max-width: 64em) {
+    // disable funny cube
+    #wrapper {
+        display: none;
+    }
+    
+    .grid {
+        margin-left: auto;
+    }
+}
