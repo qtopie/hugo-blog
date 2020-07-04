@@ -11,7 +11,7 @@ https://themes.gohugo.io/hugo-cards/
 https://sourcegraph.com/github.com/bul-ikana/hugo-cards/-/blob/layouts/_default/baseof.html
 https://xyproto.github.io/splash/docs/longer/all.html
 
-3. nodejs
+3. nodejs -x
 https://www.henriksommerfeld.se/build-steps-using-npm-scripts-for-my-hugo-blog/
 https://www.henriksommerfeld.se/dark-mode-learnings/
 https://gohugo-amp.gohugohq.com/styling/
