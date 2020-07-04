@@ -31,5 +31,5 @@ jobs:
     - name: Install Dependencies
       run: yarn install
 
-   - name: Build
+    - name: Build
       run: yarn run theme:build
