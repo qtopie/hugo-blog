@@ -1,12 +1,9 @@
 <div class="fixed-height-container">
-  <amp-img class="contain"
-  on="tap:lightbox"
-  role="button"
-  tabindex="0"
-  alt="{{ .Text }}" 
-  src="{{ .Destination | safeURL }}" 
-  layout="fill"
-  {{ with .Title}} title="{{ . }}"{{ end }}>
-</amp-img>
-<amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
+    <amp-img class="contain"
+      alt="{{ .Text }}" 
+      src="{{ .Destination | safeURL }}" 
+      layout="fill"
+      {{ with .Title}} title="{{ . }}"{{ end }}
+      lightbox>
+    </amp-img>
 </div>

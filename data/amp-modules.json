@@ -25,7 +25,6 @@
   "amp-google-vrview-image" : "https://cdn.ampproject.org/v0/amp-google-vrview-image-0.1.js",
   "amp-hulu" : "https://cdn.ampproject.org/v0/amp-hulu-0.1.js",
   "amp-iframe" : "https://cdn.ampproject.org/v0/amp-iframe-0.1.js",
-  "amp-image-lightbox" : "https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js",
   "amp-instagram" : "https://cdn.ampproject.org/v0/amp-instagram-0.1.js",
   "amp-install-serviceworker" : "https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js",
   "amp-jwplayer" : "https://cdn.ampproject.org/v0/amp-jwplayer-0.1.js",
@@ -49,5 +48,7 @@
   "amp-vimeo" : "https://cdn.ampproject.org/v0/amp-vimeo-0.1.js",
   "amp-vine" : "https://cdn.ampproject.org/v0/amp-vine-0.1.js",
   "amp-viz-vega" : "https://cdn.ampproject.org/v0/amp-viz-vega-0.1.js",
-  "amp-youtube" : "https://cdn.ampproject.org/v0/amp-youtube-0.1.js"
+  "amp-youtube" : "https://cdn.ampproject.org/v0/amp-youtube-0.1.js",
+  "amp-pan-zoom": "https://cdn.ampproject.org/v0/amp-pan-zoom-0.1.js",
+  "amp-lightbox-gallery": "https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"
 }
