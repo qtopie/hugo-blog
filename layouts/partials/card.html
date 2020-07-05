@@ -19,6 +19,12 @@
 
   <div class="grid">
     {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts") }}
+
+    <!-- Leave blank page messages -->
+    {{ if (eq $paginator.TotalPages 0) }}
+    <h1>Seems it's a blank page...</h1>
+    {{ end }}
+
     {{ range $paginator.Pages }}
     <div class="card">
       <a href="{{ .Permalink }}" class="index-anchor">

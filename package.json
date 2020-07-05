@@ -6,7 +6,7 @@
     "scripts": {
         "hugo:server": "cd ../../ && hugo server --buildDrafts --buildFuture && cd -",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build:prod": "yarn run theme:build && cd ../../ && hugo --minify && cd - && yarn run optimize:html",
+        "build:prod": "yarn run theme:build && cd ../../ && hugo --minify --enableGitInfo && cd - && yarn run optimize:html",
         "optimize:html": "./node_modules/.bin/html-minifier --input-dir ../../public/ --output-dir ../../public/ --file-ext html -c ./.html-minifier-config.json",
         "theme:build": "node ./.bin/styling.js",
         "theme:watch": "./node_modules/.bin/nodemon -e scss -w ./ -x yarn run theme:build"
